@@ -8,5 +8,5 @@ flup
 MarkupSafe==1.0
 pydocumentdb>=1.0.0
 pytz==2013b
-Werkzeug==0.14.1
+Werkzeug==0.15.3
 keras
