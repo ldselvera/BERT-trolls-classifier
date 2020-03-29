@@ -12,16 +12,15 @@
     <body background="{{ url_for('static', filename='img/backimg.png') }}">
     <div class="s013">
         {% if result %}
-      <form action ="classification" method ="POST">
+      <form>
         <fieldset>
           <legend>{{ result }}</legend>
-          <button class="btn-search" type="submit" value =submit>Back</button>
         </fieldset>
       </form>
       {% else %}
       <form>
         <fieldset>
-          <legend>Please enter a question.</legend>
+          <legend>Please enter a comment.</legend>
         </fieldset>
       </form>
       {% endif %}
