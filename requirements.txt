@@ -4,7 +4,6 @@ itsdangerous==0.24
 Jinja2==2.10
 flask-mail==0.7.6
 flask-wtf==0.8.4
-flask-babel==0.8
 flup
 MarkupSafe==1.0
 pydocumentdb>=1.0.0
