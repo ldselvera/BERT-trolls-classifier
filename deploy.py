@@ -27,5 +27,5 @@ def result():
     #answer = prediction(question, model, tokenizer)
   return render_template("classification.html", result= answer)
 
-if __name__ == '__main__':
-  app.run()
+# if __name__ == '__main__':
+#   app.run()
