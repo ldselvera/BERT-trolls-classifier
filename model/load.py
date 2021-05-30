@@ -1,16 +1,13 @@
-import keras.models
-from keras.models import model_from_json
-import pickle
+import torch
+from pytorch_pretrained_bert import BertTokenizer, BertForSequenceClassification
 
 def load_info():
-    json_file = open('model/model.json', 'r')
-    loaded_model_json = json_file.read()
-    json_file.close()
-    loaded_model = model_from_json(loaded_model_json)
-    # load weights into new model
-    loaded_model.load_weights("model/model.h5")
+    # Load BertForSequenceClassification, the pretrained BERT model with a single linear classification layer on top. 
 
-    with open('model/tokenizer.pickle', 'rb') as handle:
-        tokenizer = pickle.load(handle)
+    model = BertForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=2)
+    model.cuda()
+    model.load_state_dict(torch.load("model/model.pt"))
+    model.eval()
+    tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case=True)
 
-    return loaded_model, tokenizer
+    return model, tokenizer

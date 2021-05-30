@@ -1,13 +1,11 @@
 from flask import Flask, render_template, request, session, redirect
-# import os
-# import sys
-# from model.predict import prediction
-# from model.load import load_info
+from model.predict import prediction
+from model.load import load_info
 
 app = Flask(__name__)
 
-# global model
-# model, tokenizer = load_info()
+global model
+model, tokenizer = load_info()
  
 @app.route('/')
 def index():
@@ -21,8 +19,8 @@ def result():
   if question=='':
     answer="Please provide a comment."
   else:
-    answer='Not a troll.'
-    #answer = prediction(question, model, tokenizer)
+    # answer='Not a troll.'
+    answer = prediction(question, model, tokenizer)
   return render_template("classification.html", result= answer)
 
 if __name__ == '__main__':
