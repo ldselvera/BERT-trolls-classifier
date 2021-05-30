@@ -1,4 +1,4 @@
-# Online Trolls detector
+# Online Trolls Detector using BERT
 Website for trolls detection on Forums website.
 
 ## Deep Learning Model
