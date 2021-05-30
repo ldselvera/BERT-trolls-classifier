@@ -2,28 +2,25 @@
 Website for trolls detection on Forums website.
 
 ## Deep Learning Model
-Deep learning model building can be reproduce at google colab.
+BERT model building can be reproduce at google colab.
 
-Google Colab: https://colab.research.google.com/drive/1jgteMRmGz2I0XWVGxcVosQHWY1CU3G2d
+Google Colab: https://colab.research.google.com/github/ldselvera/troll_detector/blob/master/BERT_Classifier.ipynb
 
 Pytorch
 
 BERT
 
-Tensorflow
-
 Keras
+
+Sklearn
 
 Numpy
 
 Pandas
 
 ## Website
-http://trollsdetector.herokuapp.com/
 
 Flask
-
-Heroku
 
 HTML
 
