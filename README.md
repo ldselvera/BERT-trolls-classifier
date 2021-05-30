@@ -20,6 +20,10 @@ Pandas
 
 ## Website
 
+To run flask website execute:
+
+$python deploy.py
+
 Flask
 
 HTML
